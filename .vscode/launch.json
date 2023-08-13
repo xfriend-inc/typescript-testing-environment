@@ -1,0 +1,68 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "DEV",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run start:dev",
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceFolder}/**/*.js",
+        "!**/node_modules/**"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
+      "env": {
+        "SERVICE": "xfriend-be-ts-template",
+        "PORT": "3001",
+        "HOST": "localhost",
+        "NODE_ENV": "development",
+        "IS_RESPONSE_COMPRESSOR_ACTIVE": "6",
+        "JWT_SECRET_KEY": "2a3c7093b8d79f9069f6ab03319736ccb8b8200d",
+        "JWT_TOKEN_EXPIRATION": "1d",
+        "DATABASE_URL": "postgres://postgres:postgres@localhost:5432/wishlists?schema=wishlist",
+        "X_API_KEY": "2a3c7093b8d79f9069f6ab03319736ccb8b8200d",
+      }
+    },
+    {
+      "name": "test-int",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run test:int",
+      "cwd": "${workspaceRoot}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceFolder}/**/*.js",
+        "!**/node_modules/**"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
+      "env": {
+        "SERVICE": "xfriend-be-ts-template",
+        "PORT": "3001",
+        "HOST": "localhost",
+        "NODE_ENV": "test",
+        "JWT_SECRET_KEY": "2a3c7093b8d79f9069f6ab03319736ccb8b8200d",
+        "JWT_TOKEN_EXPIRATION": "1d",
+        "DATABASE_URL": "postgres://postgres:postgres@localhost:5432/wishlists"
+      }
+    }
+  ]
+}

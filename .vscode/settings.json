@@ -1,0 +1,23 @@
+{
+    "recommendations": [
+        "prisma.prisma",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "graphql.vscode-graphql",
+        "firsttris.vscode-jest-runner",
+        "mikestead.dotenv",
+        "GraphQL.vscode-graphql-syntax",
+        "xabikos.JavaScriptSnippets",
+        "ms-vscode-remote.remote-wsl",
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens"
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true
+    },
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}

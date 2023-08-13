@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    entrypoint: .docker/entrypoint.sh
+    container_name: xfriend-be-ts-template
+    ports:
+      - '3001:3001'
+    volumes:
+      - .:/home/node/app
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/wishlists?schema=wishlist
+      - SERVICE=xfriend-be-ts-template
+      - PORT=3001
+      - HOST=localhost
+      - NODE_ENV=development
+      - IS_RESPONSE_COMPRESSOR_ACTIVE=6
+      - JWT_SECRET_KEY=2a3c7093b8d79f9069f6ab03319736ccb8b8200d
+      - JWT_TOKEN_EXPIRATION=1d
+      - X_API_KEY=2a3c7093b8d79f9069f6ab03319736ccb8b8200d
+    depends_on:
+      - db
+      - pgadmin
+    networks:
+      - wishlist_network
