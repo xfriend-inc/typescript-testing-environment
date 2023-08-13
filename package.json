@@ -1,11 +1,11 @@
 {
-  "name": "xfriend-be-ts-template",
+  "name": "typescript-testing-environment",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/X-FRIEND/xfriend-be-ts-template.git"
+    "url": "git+https://github.com/X-FRIEND/typescript-testing-environment.git"
   },
   "engines": {
     "node": "^17.9.1",
@@ -24,24 +24,13 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/X-FRIEND/xfriend-be-ts-template/issues"
+    "url": "https://github.com/X-FRIEND/typescript-testing-environment/issues"
   },
-  "homepage": "https://github.com/X-FRIEND/xfriend-be-ts-template#readme",
+  "homepage": "https://github.com/X-FRIEND/typescript-testing-environment#readme",
   "dependencies": {
-    "@fastify/cors": "^8.2.0",
-    "@fastify/swagger": "^8.3.1",
-    "@fastify/swagger-ui": "^1.3.0",
-    "@graphql-tools/schema": "^10.0.0",
-    "@prisma/client": "^5.0.0",
     "dotenv": "^16.0.3",
-    "fastify": "^4.13.0",
-    "fastify-healthcheck": "^4.4.0",
-    "graphql": "^16.7.1",
-    "graphql-tag": "^2.12.6",
     "jsonwebtoken": "^9.0.1",
     "lodash": "^4.17.21",
-    "mercurius": "^13.1.0",
-    "pg": "^8.11.2",
     "reflect-metadata": "^0.1.13",
     "uuid": "^9.0.0"
   },
@@ -99,15 +88,12 @@
   },
   "scripts": {
     "transpile": "./scripts/build.bash",
-    "start": "./scripts/start.bash",
     "start:dev": "scripts/dev.bash",
     "test": "jest --config ./jest.config.js",
     "test:unit": "cross-env NODE_ENV=test-unit npm run test ./test/unit/**/*.ts",
-    "test:int": "cross-env NODE_ENV=test-int npm run test ./test/int/**/*.ts",
-    "lint": "eslint ./src",
+    "lint": "eslint ./test",
     "lint:fix": "npm run lint -- --fix",
-    "format": "prettier ./src ./test --list-different --write",
-    "seed": "node prisma/seeds/index.js",
+    "format": "prettier ./test --list-different --write",
     "postinstall": "husky install"
   }
 }
