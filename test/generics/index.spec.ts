@@ -1,8 +1,10 @@
+import { describe, expect, test } from 'bun:test';
+
 const nickName = 'edge';
 
 describe('Generic', () => {
   describe('Interfaces Genéricas', () => {
-    it('Criar interfaces genéricas para definir tipos flexíveis que podem ser usados com diferentes tipos de dados.', () => {
+    test('Criar interfaces genéricas para definir tipos flexíveis que podem ser usados com diferentes tipos de dados.', () => {
       /**
        * Neste exemplo, a interface Box é genérica, com um parâmetro de tipo T.
        * Isso permite que você defina tipos de caixas que contêm diferentes tipos de valores.
@@ -20,7 +22,7 @@ describe('Generic', () => {
   });
 
   describe('Funções Genéricas', () => {
-    it('Funções genéricas para criar funções que trabalham com vários tipos.', () => {
+    test('Funções genéricas para criar funções que trabalham com vários tipos.', () => {
       /**
        * Aqui, a função genérica identity aceita um argumento de qualquer tipo e retorna o mesmo argumento.
        * Isso permite que você use a mesma função com diferentes tipos de entrada e saída.
@@ -38,7 +40,7 @@ describe('Generic', () => {
   });
 
   describe('Genéricos em Classes', () => {
-    it('Aplicar generics a classes, permitindo que as classes aceitem e retornem diferentes tipos.', () => {
+    test('Aplicar generics a classes, permitindo que as classes aceitem e retornem diferentes tipos.', () => {
       /**
        * Neste exemplo, a classe Container é genérica, com um parâmetro de tipo T.
        * Isso permite que você crie contêineres que armazenem diferentes tipos de valores.
@@ -59,7 +61,7 @@ describe('Generic', () => {
   });
 
   describe('Herança Genérica', () => {
-    it('Estender classes e interfaces genéricas com outras classes genéricas.', () => {
+    test('Estender classes e interfaces genéricas com outras classes genéricas.', () => {
       /**
        * Neste caso, a interface Comparable é genérica, permitindo que você crie tipos comparáveis com base em diferentes tipos.
        * A classe Circle implementa Comparable<Circle>, onde Circle é usado como o tipo genérico que representa o próprio tipo da classe.
@@ -81,7 +83,7 @@ describe('Generic', () => {
   });
 
   describe('Restrições Genéricas', () => {
-    it('Restrições aos tipos que podem ser usados com um parâmetro genérico.', () => {
+    test('Restrições aos tipos que podem ser usados com um parâmetro genérico.', () => {
       /**
        * Neste exemplo, a função printProperty recebe um argumento
        * obj que deve ser um objeto com uma propriedade name do tipo string.
@@ -95,7 +97,7 @@ describe('Generic', () => {
       expect(printProperty({ name: 'edge' })).toBe('edge');
     });
 
-    it('Restrições aos tipos que podem ser usados com um parâmetro genérico a parti do construtor', () => {
+    test('Restrições aos tipos que podem ser usados com um parâmetro genérico a parti do construtor', () => {
       /**
        * Neste exemplo, a restrição T extends new (...args: string[]) => any garante que T
        * seja uma classe com um construtor que retorna algum tipo.

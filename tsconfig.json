@@ -1,35 +1,44 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
     "lib": [
       "es6"
     ],
     "allowJs": true,
-    "outDir": "build",
     "strict": true,
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "composite": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "strictPropertyInitialization": false,
     "strictNullChecks": false,
-    "baseUrl": "./",
-    "paths": {
-      "@helpers/*": [
-        "src/utils/*"
-      ]
-    },
-    "typeRoots": [
-      "@types",
-      "./node_modules/@types"
-    ],
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "resolveJsonModule": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "build",
+    "baseUrl": "./",
+    "paths": {
+      "src": [
+        "./src"
+      ]
+    },
+    "types": [
+      "bun-types"
+    ],
+    "typeRoots": [
+      "@types",
+      "./node_modules/@types",
+    ],
   },
   "include": [
     "@types",
+    "src",
     "./test/**/*.ts"
   ]
 }

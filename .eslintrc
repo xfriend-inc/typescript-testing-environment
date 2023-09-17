@@ -6,19 +6,15 @@
       "jsx": true,
       "js": true
     },
-    "jest": true,
     "sourceType": "module"
   },
   "env": {
-    "es2021": true,
-    "node": true,
-    "jest/globals": true
+    "es2021": true
   },
   "plugins": [
     "import",
     "promise",
     "n",
-    "jest",
     "simple-import-sort",
     "@typescript-eslint",
     "prettier"
